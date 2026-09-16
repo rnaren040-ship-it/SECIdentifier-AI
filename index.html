@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Component AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">⚡ Smart Component AI</div>
+    <span class="tag">ECE • AI Project</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">AI-POWERED ELECTRONICS</p>
+        <h1>Identify Electronic Components <span>Instantly.</span></h1>
+        <p class="subtitle">Upload a component image and get an AI-style identification with useful electronics information.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="upload-area" id="dropArea">
+        <div class="upload-icon">📷</div>
+        <h2>Upload Component Image</h2>
+        <p>Choose an image of a resistor, capacitor, LED, diode or transistor.</p>
+        <label class="upload-btn" for="imageInput">Choose Image</label>
+        <input type="file" id="imageInput" accept="image/*" hidden>
+        <p class="hint">JPG, PNG or WEBP</p>
+      </div>
+
+      <div class="preview-wrap" id="previewWrap">
+        <img id="preview" alt="Selected component">
+        <button id="analyzeBtn" class="analyze-btn">🤖 Analyze Component</button>
+      </div>
+
+      <div class="result" id="result">
+        <div class="result-head">
+          <div>
+            <p class="eyebrow">AI RESULT</p>
+            <h2 id="componentName">Component</h2>
+          </div>
+          <div class="confidence" id="confidence">--%</div>
+        </div>
+        <div class="info-grid">
+          <div><span>Category</span><strong id="category">-</strong></div>
+          <div><span>Function</span><strong id="functionText">-</strong></div>
+          <div><span>Common Use</span><strong id="commonUse">-</strong></div>
+          <div><span>Symbol</span><strong id="symbol">-</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="components">
+      <h2>Supported Components</h2>
+      <div class="chips">
+        <span>🔴 Resistor</span>
+        <span>🔵 Capacitor</span>
+        <span>💡 LED</span>
+        <span>🔺 Diode</span>
+        <span>🔲 Transistor</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>Smart Component AI • Educational Prototype</footer>
+  <script src="script.js"></script>
+</body>
+</html>
